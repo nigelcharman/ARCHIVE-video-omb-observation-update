@@ -7,7 +7,7 @@ jobs:
     - uses: narakeet/build-video-github-action@v1.0.3
       id: video
       with:
-        source-path: hello-world/script/script.md
+        source-path: script/script.md
         github-token: $
         api-key: ${{ secrets.NARAKEET_API_KEY }}
     - uses: actions/upload-artifact@v1
