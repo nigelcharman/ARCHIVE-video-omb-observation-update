@@ -8,9 +8,9 @@ jobs:
       id: video
       with:
         source-path: script/script.md
-        github-token: $
+        github-token: ${{ secrets.GITHUB_TOKEN }}
         api-key: ${{ secrets.NARAKEET_API_KEY }}
     - uses: actions/upload-artifact@v1
       with:
         name: video
-        path: "$"
+        path: "${{ steps.video.outputs.video-file }}"
